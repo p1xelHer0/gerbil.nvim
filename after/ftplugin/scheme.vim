@@ -63,4 +63,13 @@ setl lispwords+=check,checkf,check-eq?,check-not-eq?,check-eqv?
 setl lispwords+=check-not-eqv?,check-equal?,check-not-equal?
 setl lispwords+=check-output,check-predicate,check-exception
 
+"""   TODO
+""" - Does Gerbil have any other delimeters?
+""" - Example: Chicken Schemes `foreign-declare abbreviation `#> ... <#`
+""" - http://api.call-cc.org/5/doc/chicken/standard-extensions/%23%3E
+" if exists('g:loaded_matchit') && !exists('b:match_words')
+"   let b:match_words = '#>:<#'
+"   let b:undo_ftplugin = b:undo_ftplugin . ' | unlet! b:match_words'
+" endif
+
 let b:did_ftplugin_gerbil = 1

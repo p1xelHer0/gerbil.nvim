@@ -34,7 +34,7 @@
   (#match? @keyword "^(import|export|declare|include|module|extern|cond-expand|require|provide|if|apply|eval|set!|when|unless|not|case-lambda|core-syntax-case|core-ast-case|syntax-case|ast-case|ast-rules|identifier-rules|core-match|with-syntax|with-syntax\\*|with-ast|with-ast\\*|call/cc|call/values|begin-syntax|begin-annotation|begin0|let-values|letrec-values|letrec\\*-values|letrec\\*|rec|quote|quasiquote|unquote|unquote-splicing|parameterize|syntax-parameterize|quote-syntax|syntax|quasisyntax|unsyntax|unsyntax-splicing|syntax/loc|def|def\\*|define-values|define-alias|alet|alet\\*|error|raise|let/cc|let/esc|unwind-protect|begin-foreign|begin-ffi|cut|with|with\\*|match|match\\*|sync|wait|foldl|foldr|andmap|ormap|type-of|spawn|spawn\\*|spawn/name|spawn/group|try|finally|catch|with-destroy|while|until|defmethod/alias|with-methods|with-class-methods|with-class-method|hash|hash-eq|hash-eqv|let-hash|assert!|awhen|chain|is|continue|yield|coroutine|for|for\\*|for/collect|for/fold|with-result|run-tests!|test-suite|test-case|check|checkf|check-eq\\?|check-not-eq\\?|check-eqv\\?|check-not-eqv\\?|check-equal\\?|check-not-equal\\?|check-output|check-predicate|check-exception|<-|<<|->|->>|-->|-->\\?)$"))
 
 ;;   TODO
-;; -
+;; - Fix this, if it's even needed?
 ;;
 ;; Matches `symbol`
 ;; in the form `(symbol (...))`
@@ -46,7 +46,7 @@
 
 ;;; -*- Builtins -*------------------------------------------------------------
 
-;; TODO
+;;   TODO
 ;; - What do we consider a builtin? Things that are part of the core language
 ;;   but not a keyword, like `foldl`?
 ;;
@@ -87,5 +87,7 @@
 
 ;; rainbow-delimiters.nvim
 ;; Disable rainbow-delimiters in S-expression comments `#;(...)`
-((comment (list) @comment)
+((comment
+  .
+  (list) @comment)
   (#set! "priority" 130))

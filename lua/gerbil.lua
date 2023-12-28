@@ -1,5 +1,6 @@
 local config = require("gerbil.config")
 local conjure = require("gerbil.conjure")
+local paredit = require("gerbil.paredit")
 
 local M = {}
 
@@ -12,6 +13,7 @@ M.setup = function(options)
   local opts = config.setup(options)
 
   conjure.setup(opts.conjure)
+  paredit.setup(opts.paredit)
 end
 
 M.test = function()

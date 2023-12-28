@@ -8,6 +8,7 @@ local defaults = {
     command = "gxi",
     prompt_pattern = "%d*> ",
   },
+  paredit = {},
 }
 
 local options = {}
@@ -21,6 +22,7 @@ function M.setup(options)
 
   vim.validate({
     conjure = { options.conjure, "table" },
+    paredit = { options.paredit, "table" },
   })
 
   vim.validate({

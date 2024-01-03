@@ -1,6 +1,4 @@
 local config = require("gerbil.config")
-local conjure = require("gerbil.conjure")
-local paredit = require("gerbil.paredit")
 
 local M = {}
 
@@ -12,8 +10,14 @@ M.setup = function(options)
 
   local opts = config.setup(options)
 
-  conjure.setup(opts.conjure)
-  paredit.setup(opts.paredit)
+  -- TODO: check for this in another way, temporary
+  if opts.conjure.setup then
+    require("gerbil.conjure").setup(opts.conjure)
+  end
+
+  if opts.paredit.setup then
+    require("gerbil.paredit").setup(opts.paredit)
+  end
 end
 
 M.test = function()

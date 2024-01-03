@@ -8,7 +8,9 @@ local defaults = {
     command = "gxi",
     prompt_pattern = "%d*> ",
   },
-  paredit = {},
+  paredit = {
+    setup = false,
+  },
 }
 
 local options = {}
@@ -29,6 +31,8 @@ function M.setup(options)
     ["options.conjure.setup"] = { options.conjure.setup, "boolean" },
     ["options.conjure.command"] = { options.conjure.command, "string" },
     ["options.conjure.prompt_pattern"] = { options.conjure.prompt_pattern, "string" },
+
+    ["options.paredit.setup"] = { options.paredit.setup, "boolean" },
   })
 
   return options

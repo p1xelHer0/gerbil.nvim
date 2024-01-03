@@ -39,10 +39,10 @@
    "letrec*"
    ;; Common Syntactic Sugar
    "do-while" "begin0" "rec" "alet" "alet*" "and-let" "and-let*" "@list" "cut" "parameterize" "let/cc" "let/esc" "unwind-protect" "@bytes" "syntax-error" "vector-ref-set!"
+   ;; MOP Macros
+   "defstruct-type" "defclass-type" "defstruct" "define-struct" "defclass" "define-class" "defmethod" "@method" "@" "@-set!"
    ;; Pattern Matching
    "match" "match*" "cons*" "box" "struct-id" "class-id" "match-macro" "with" "with*" "?" "defsyntax-for-match"
-   ;; MOP Macros - @keyword
-   "@method" "@" "@-set!"
    ;; Macros for Syntax
    "syntax" "syntax-case" "syntax/loc" "syntax-rules" "with-syntax" "with-syntax*" "identifier-rules"
    ;; Module Sugar
